@@ -1,11 +1,13 @@
 import React, {useState} from 'react';
-import Board from '../components/Board';  
 
-type SquareType = 'X' | 'O' | null;
+import Board from '../Board';
+import { SquareType } from '../Square/SquareType';
+import './styles.css';
+
+
 type HistoryType = SquareType[][];
 
-
-const Game: React.FC = () =>   {
+const Game = () => {
     const [history, setHistory] = useState<HistoryType>([Array(9).fill(null)]);
     const [currentMove, setCurrentMove] = useState<number>(0);
     const xIsNext = currentMove % 2 === 0;
@@ -15,7 +17,7 @@ const Game: React.FC = () =>   {
       const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
       setHistory(nextHistory);
       setCurrentMove(nextHistory.length - 1);
-    }
+    };
   
     const  jumpTo = (nextMove:number): void => {
       setCurrentMove(nextMove);
@@ -45,5 +47,5 @@ const Game: React.FC = () =>   {
         </div>
       </div>
     );
-  }
+  };
   export default Game;

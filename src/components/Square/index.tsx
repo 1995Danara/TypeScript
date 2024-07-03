@@ -1,17 +1,20 @@
 import React from 'react';
 
-type SquareType = 'X' | 'O' | null;
+import {SquareType} from '../Square/SquareType';
+import './styles.css'; 
+
+ 
 
 interface SquareProps{
  value: SquareType;
  onSquareClick: () => void;
 }
 
-const  Square: React.FC<SquareProps> = ({ value, onSquareClick }) => {
+const  Square = ({ value, onSquareClick }: SquareProps ) => {
     return (
       <button className="square" onClick={onSquareClick}>
         {value}
       </button>
     );
-  }
+  };
   export default Square;

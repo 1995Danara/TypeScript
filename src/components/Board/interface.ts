@@ -1,4 +1,4 @@
-import { SquareType } from '../Square/SquareType';
+import { SquareType } from '../../types/types';
 
 export interface BoardProps {
   xIsNext: boolean;

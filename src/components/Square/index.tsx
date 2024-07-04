@@ -1,14 +1,8 @@
 import React from 'react';
 
-import {SquareType} from '../Square/SquareType';
+import { SquareType } from '../../types/types';
 import './styles.css'; 
-
- 
-
-interface SquareProps{
- value: SquareType;
- onSquareClick: () => void;
-}
+import { SquareProps } from './interface';
 
 const  Square = ({ value, onSquareClick }: SquareProps ) => {
     return (

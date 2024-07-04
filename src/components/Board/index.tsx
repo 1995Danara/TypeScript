@@ -1,6 +1,5 @@
 import React from 'react';
 import Square from '../Square'; 
-import { SquareType } from '../Square/SquareType'; 
 import { calculateWinner } from '../Square/utils'; 
 import './styles.css'; 
 import {BoardProps} from '../Board/interface';

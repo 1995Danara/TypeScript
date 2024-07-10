@@ -3,7 +3,7 @@ import Game from './components/Game';
 
 const App: React.FC = () => {
   return (
-    <div className = "app">
+    <div className="app">
       <h1>Tic Tac Toe</h1>
       <Game />
     </div>

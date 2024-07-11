@@ -5,7 +5,7 @@ import './styles.css';
 import { BoardProps } from '../Board/interface';
 
 const Board = ({ xIsNext, squares, onPlay }: BoardProps) => {
-  const handleClick = (i: number) => {
+ const handleClick = (i: number) => {
     if (calculateWinner(squares) || squares[i]) {
       return;
     }

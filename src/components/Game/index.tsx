@@ -4,6 +4,8 @@ import { SquareType } from '../../types/types';
 import { HistoryType } from './interface';
 import './styles.css';
 
+import { Button} from '@mui/material';
+
 const Game = () => {
   const [history, setHistory] = useState<HistoryType>([
     Array(9).fill(null) as SquareType[],
@@ -31,7 +33,9 @@ const Game = () => {
     }
     return (
       <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+        <Button variant = "contained" color = "primary" onClick = {() => jumpTo(move)}>
+          {description}
+          </Button>
       </li>
     );
   });
@@ -49,3 +53,5 @@ const Game = () => {
 };
 
 export default Game;
+
+

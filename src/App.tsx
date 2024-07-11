@@ -1,7 +1,7 @@
 import React from 'react';
 import Game from './components/Game';
 
-const App: React.FC = () => {
+const App  = () => {
   return (
     <div className="app">
       <h1>Tic Tac Toe</h1>
